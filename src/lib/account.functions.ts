@@ -8,8 +8,8 @@ export const ensureAccountAccess = createServerFn({ method: "POST" })
   .handler(async ({ context }) => {
     const email = typeof context.claims.email === "string" ? context.claims.email.toLowerCase() : "";
     const metadata = context.claims.user_metadata;
-    const displayName = metadata && typeof metadata === "object" && "full_name" in metadata && typeof metadata.full_name === "string"
-      ? metadata.full_name
+    const displayName: string = metadata && typeof metadata === "object" && typeof (metadata as Record<string, unknown>)["full_name"] === "string"
+      ? String((metadata as Record<string, unknown>)["full_name"])
       : email.split("@")[0] || "Sentinel user";
     const isAdminEmail = email === ADMIN_EMAIL;
 

@@ -25,10 +25,10 @@ export function PendingScreen() {
     <div className="relative z-10 w-full max-w-xl">
       <div className="mb-7 flex justify-center"><SentinelMark /></div>
       <section className="glass-panel overflow-hidden text-center">
-        <div className="pending-stripe" />
+        <div className="pending-stripe h-2" />
         <div className="p-7 sm:p-10">
-          <div className="mx-auto grid size-16 place-items-center rounded-2xl border border-amber-300/20 bg-amber-400/10 text-amber-300"><Clock3 className="size-7" /></div>
-          <p className="eyebrow mt-7 text-amber-300">Access review in progress</p>
+          <div className="mx-auto grid size-16 place-items-center rounded-2xl border border-warning/30 bg-warning/10 text-warning"><Clock3 className="size-7" /></div>
+          <p className="eyebrow mt-7 text-warning!">Access review in progress</p>
           <h1 className="mt-3 font-display text-3xl font-semibold sm:text-4xl">You’re on the list.</h1>
           <p className="mx-auto mt-4 max-w-md text-sm leading-6 text-muted-foreground">Your Sentinel workspace is reserved while an administrator reviews your account. We’ll keep everything ready.</p>
           <div className="mx-auto mt-7 flex max-w-sm items-center gap-3 rounded-xl border border-border bg-subtle px-4 py-3 text-left">
